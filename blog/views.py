@@ -1,5 +1,11 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from blog.models import Post
 
 def home(request):
-    return HttpResponse("<h1>Hello, World!!!!</h1>")
+    posts = Post.objects.all()
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/home.html', context)
+
+
