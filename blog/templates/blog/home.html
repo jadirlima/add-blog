@@ -8,7 +8,7 @@
     <h2>Lista de posts cadastrados</h2>
     <ul>
         {% for post in posts %}
-            <li>{{ post.titulo }} - {{post.autor}}</li>
+            <li><a href="{% url 'post_detail' post.id %}">{{post.titulo}} - {{post.autor}} </a></li>
         {% endfor %}
     </ul>
 </body>
