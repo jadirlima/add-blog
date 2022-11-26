@@ -11,5 +11,7 @@
             <li><a href="{% url 'post_detail' post.id %}">{{post.titulo}} - {{post.autor}} </a></li>
         {% endfor %}
     </ul>
+    {% load static %}
+<img src="{% static 'blog/logo.png' %}">
 </body>
 </html>
